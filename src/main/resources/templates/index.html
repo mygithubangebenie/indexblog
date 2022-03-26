@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Blog App</title>
+</head>
+
+<body>
+	<h3>Blogs</h3>
+	
+	<table class="table table-striped">
+		<thead>
+			<tr>
+			    <th scope="col">#</th>
+				<th scope="col">Title</th>
+				<th scope="col">Content</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="blog :${blogs}">
+			    <td th:text="${blog.id}">ID</td>
+				<td th:text="${blog.title}">title</td>
+				<td th:text="${blog.content}">content</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
