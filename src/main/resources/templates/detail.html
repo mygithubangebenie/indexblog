@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table class="table table-striped">
+
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Title</th>
+				<th scope="col">Content</th>
+				<th scope="col">action</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr>
+				<td th:text="${blog.id}">#</td>
+				<td th:text="${blog.title}">title</td>
+				<td th:text="${blog.content}">content</td>
+
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

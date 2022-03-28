@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form th:action="@{'/update/updatedata/' + ${blog.id}}" method="GET">
+
+		<label>Title</label><input type="text" name="title"
+			th:value="${blog.title}" class="form-control" /> <label>Content</label>
+		<textarea name="content" th:value="${blog.content}"
+			class="form-control"> [[${blog.content}]]</textarea>
+
+		<input type="submit" value="Update blog">
+
+	</form>
+</body>
+
+</html>
